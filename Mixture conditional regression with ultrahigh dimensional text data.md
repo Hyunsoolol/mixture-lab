@@ -263,12 +263,11 @@ TF-IDF 상위 키워드 기반 의미 부여
 - **Efficiency:** Oracle Estimator와 점근적으로 동일한 효율성 입증.
     
 
-### Future Works (Related to My Research)
-
-- **Relaxing Assumptions:** Binary $Z$ 대신 **Frequency**나 **Embedding** 활용 가능성.
+### Future Works
+- Representation Learning
+    - Binary $Z$의 정보 손실을 극복하기 위해 **LLM Embedding** 활용 (Semantics 포착).
+    - Black-box 문제를 해결하기 위한 **De-embedding** 전략 도입.
     
-- **Model Extension:** Linear Regression을 넘어 GLM (Logistic, Poisson)으로의 확장.
-    
-- **Optimization:** EM 알고리즘의 Global Convergence에 대한 이론적 보완.
----
+- Relaxing Assumptions: 단순 이진 변수(Binary)를 넘어 단어 빈도(**Frequency**) 정보 활용 가능성.
 
+- Model Extension: Standard Linear Regression을 넘어 **GLM (Logistic, Poisson)** 등으로의 확장.
