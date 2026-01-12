@@ -188,7 +188,7 @@ $$P(Z_i | K_i = k) = \prod_{j=1}^{p} p_{kj}^{Z_{ij}} (1 - p_{kj})^{1 - Z_{ij}}$$
         
 - **Latent Class Discovery ($K=7$ selected by BIC):**
     
-    - MCR 모델은 텍스트($Z$)를 이용해 범죄의 **세부 유형(Nature of Crime)**을 성공적으로 군집화함2.
+    - MCR 모델은 텍스트($Z$)를 이용해 범죄의 **세부 유형(Nature of Crime)**을 성공적으로 군집화함.
         
     - **Class 1:** 주거 침입 (Home, break-in).
         
