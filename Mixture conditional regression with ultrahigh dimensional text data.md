@@ -88,7 +88,7 @@
 .reveal .mermaid .node div {
   text-align: center !important; 
   line-height: 1.3 !important;
-  font-size: 8px !important;     /* 글자 크기 강제 고정 */
+  font-size: 8px !important;      /* 글자 크기 강제 고정 */
 }
 
 </style>
@@ -178,7 +178,7 @@ $$P(Z_i | K_i = k) = \prod_{j=1}^{p} p_{kj}^{Z_{ij}} (1 - p_{kj})^{1 - Z_{ij}}$$
 
 ### 🇨🇳 Data Description & Latent Classes
 
-- **Dataset:** Chinese Burglary Cases (2017-2018) from CJO1.
+- **Dataset:** Chinese Burglary Cases (2017-2018) from CJO.
     
     - Sample size $n = 6,118$.
         
@@ -196,7 +196,7 @@ $$P(Z_i | K_i = k) = \prod_{j=1}^{p} p_{kj}^{Z_{ij}} (1 - p_{kj})^{1 - Z_{ij}}$$
         
     - **Class 4:** 귀금속 절도 (Gold, Necklace, Ring).
         
-	    $\rightarrow$ _Text semantics reveal qualitative differences in crimes._
+    $\rightarrow$ _Text semantics reveal qualitative differences in crimes._
 
 ---
 ### Estimation Results: MCR vs. OLR
@@ -209,9 +209,9 @@ $$P(Z_i | K_i = k) = \prod_{j=1}^{p} p_{kj}^{Z_{ij}} (1 - p_{kj})^{1 - Z_{ij}}$$
 |**Ethnicity (Han)**|-0.0761 ($p=0.000$)|-0.0633 ($p=0.000$)|Robust|
 |**Age**|0.0016 ($p=0.032$)|0.0012 ($p=0.042$)|Robust|
 
-- **OLR Result:** 남성이 여성보다 유의하게 형량이 높음 $\rightarrow$ **Potential Gender Bias?**
+- **OLR Result:** 남성이 여성보다 유의하게 형량이 높음
     
-- **MCR Result:** 범죄 유형(Latent Class)을 통제하자 **성별 효과는 유의하지 않게 됨 ($p > 0.05$).**
+- **MCR Result:** 범죄 유형(Latent Class)을 통제하자 **성별 효과는 유의하지 않게 됨**
     
 - **Conclusion:** 남성이 더 중형이 선고되는 범죄 유형(예: 강도 등)에 연루될 확률이 높았던 것임. MCR은 이러한 **Omitted Variable Bias**를 효과적으로 제거함.
 
@@ -238,17 +238,17 @@ $$P(Z_i | K_i = k) = \prod_{j=1}^{p} p_{kj}^{Z_{ij}} (1 - p_{kj})^{1 - Z_{ij}}$$
 
 TF-IDF 상위 키워드 기반 의미 부여
 
-| Class (표본수) | Top keywords(예시)                                     | 해석 요약      |
-| ----------- | ---------------------------------------------------- | ---------- |
-| 1 (2809)    | home, breakin, record, window, climb                 | 전과/침입 정황   |
-| 2 (1265)    | photo, cigarette, laptop, video, apple               | 담배·전자기기 절도 |
-| 3 (807)     | largeramount, possession, secrecy, indemnity, weapon | 고액/중대 정황   |
-| 4 (763)     | gold, necklace, ring, bracelet, watch                | 귀금속 절도     |
-| 5 (288)     | cash, phone, bedroom, gate, wardrobe                 | 현금·생활공간 절도 |
-| 6 (168)     | liability, drive, force, motorcycle, joint           | 공범/결합 범행   |
-| 7 (18)      | knife, robbery, violence, escape, threat             | 강도/폭력 전환   |
+| Class (표본수) | Top keywords (예시) | 해석 요약 |
+| :--- | :--- | :--- |
+| 1 (2809) | home, break-in, record, window, climb | 전과/침입 정황 |
+| 2 (1265) | photo, cigarette, laptop, video, apple | 담배·전자기기 절도 |
+| 3 (807) | larger amount, possession, secrecy, indemnity, weapon | 고액/중대 정황 |
+| 4 (763) | gold, necklace, ring, bracelet, watch | 귀금속 절도 |
+| 5 (288) | cash, phone, bedroom, gate, wardrobe | 현금·생활공간 절도 |
+| 6 (168) | liability, drive, force, motorcycle, joint | 공범/결합 범행 |
+| 7 (18) | knife, robbery, violence, escape, threat | 강도/폭력 전환 |
 
-- 범죄의 심각성(Severity) 수법(Modus Operandi)을 나타내는 핵심 지표임을 입증함.
+- 범죄의 심각성(Severity)과 수법(Modus Operandi)을 나타내는 핵심 지표임을 입증함.
 - 특히 Class 7(강도)이나 Class 6(공동 범죄) 같이 형량에 큰 영향을 미치는 요인들을 별도 그룹으로 정확히 분리해냄.
 ---
 
@@ -264,10 +264,12 @@ TF-IDF 상위 키워드 기반 의미 부여
     
 
 ### Future Works
-- Representation Learning
+- **Representation Learning:**
     - Binary $Z$의 정보 손실을 극복하기 위해 **LLM Embedding** 활용 (Semantics 포착).
     - Black-box 문제를 해결하기 위한 **De-embedding** 전략 도입.
     
-- Relaxing Assumptions: 단순 이진 변수(Binary)를 넘어 단어 빈도(**Frequency**) 정보 활용 가능성.
+- **Relaxing Assumptions:** 단순 이진 변수(Binary)를 넘어 단어 빈도(**Frequency**) 정보 활용 가능성.
 
-- Model Extension: Standard Linear Regression을 넘어 **GLM (Logistic, Poisson)** 등으로의 확장.
+- **Model Extension:** Standard Linear Regression을 넘어 **GLM (Logistic, Poisson)** 등으로의 확장.
+
+- **Optimization Theory:** EM 알고리즘의 Global Convergence에 대한 이론적 보완.
