@@ -2,7 +2,7 @@
 
 본 연구는 Kim et al. (2005)이 제안한 비모수적 검정(Log-rank test)의 핵심 아이디어를 준모수적 회귀모형인 **Cox Proportional Hazards Model**로 확장하는 것을 목표로 한다.
 
-특히 기존의 구간 중도절단(Interval Censored, IC) 데이터 분석에서 필수적으로 여겨지던 EM 알고리즘(Iterative Expectation-Maximization)의 반복 연산을 제거하여, **계산 복잡도(Computational Complexity)**를 획기적으로 낮추는 데 초점을 맞춘다. 이는 추후 SIMEX(Simulation Extrapolation)와 같이 반복적인 모델 적합이 요구되는 분석 환경에서 필수적인 계산 효율성을 보장한다.
+특히 기존의 구간 중도절단(Interval Censored, IC) 데이터 분석에서 필수적으로 여겨지던 EM 알고리즘(Iterative Expectation-Maximization)의 반복 연산을 제거하여, 계산 복잡도(Computational Complexity)를 획기적으로 낮추는 데 초점을 맞춘다. 이는 추후 SIMEX(Simulation Extrapolation)와 같이 반복적인 모델 적합이 요구되는 분석 환경에서 필수적인 계산 효율성을 보장한다.
 
 ## 2. 기본 설정 및 기호 정의 (Notation and Setup)
 
